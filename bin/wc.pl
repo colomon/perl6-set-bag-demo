@@ -1,5 +1,5 @@
-my $bag = bag $*IN.slurp.comb(/\w+/).map(*.lc);
+my $hamlet-words = bag slurp("data/cherry-tree").comb(/\w+/).map(*.lc);
 
-for $bag.keys.sort({ $bag{$^b} <=> $bag{$^a} }) -> $word {
-    say "$word: { $bag{$word} }";
+for $hamlet-words.keys.sort({ $hamlet-words{$^b} <=> $hamlet-words{$^a} }) -> $word {
+    say "$word: { $hamlet-words{$word} }";
 }
