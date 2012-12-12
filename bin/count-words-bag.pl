@@ -1,4 +1,4 @@
-my %words;
+my %words := KeyBag.new;
 for $*ARGFILES.slurp.comb(/\w+/).map(*.lc) -> $word {
     %words{$word}++;
 }
