@@ -1,5 +1,5 @@
 my %words;
-for $*ARGFILES.slurp.comb(/\w+/).map(*.lc) -> $word {
+for slurp.comb(/\w+/).map(*.lc) -> $word {
     %words{$word}++;
 }
 
